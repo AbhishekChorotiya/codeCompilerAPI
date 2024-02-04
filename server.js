@@ -16,6 +16,11 @@ app.use(
   })
 );
 
+app.get('/',(req,res)=>{
+  console.log('remote server')
+  res.json('Remote API')
+})
+
 app.post('/compile',async (req,res)=>{
     const code = req.body.data
     const language = req.body.language
